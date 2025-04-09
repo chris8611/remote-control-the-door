@@ -1,0 +1,8 @@
+<view class="empty-state">
+  <view class="empty-icon">
+    <svg-icon name="{{icon}}" size="120" color="#B4B4B4"/>
+  </view>
+  <view class="empty-text">{{text}}</view>
+  <view class="empty-subtext" wx:if="{{subtext}}">{{subtext}}</view>
+  <slot name="action"></slot>
+</view>

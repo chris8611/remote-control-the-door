@@ -1,16 +1,87 @@
-<!-- <view class="grid-container">
-  <view class="grid-item" wx:for="{{topics}}" wx:key="*this" wx:for-index="index" bindtap="toggleclick" data-index="{{index}}">
-    <text class="head" style="color:{{device_status[index] == '在线' ? 'green' : 'red'}}">{{device[index]}}</text>
-    <view class="status-image" style="background-color: {{powerstatus[index] == '已打开'?'#03a9f5' : '#ccc'}};" >
-    <image src="{{powerstatus[index] == '已打开' ? statusimg[0] : statusimg[1]}}" mode="aspectFit"/>
-    <image class="bottom-left-image" src="{{url[index]}}" mode="aspectFit"/></view>
-    <text class="bottom-right-text">{{currentTime}}</text>
+<view class="custom-navigation-bar" style="height: {{navBarHeight}}rpx; padding-top: {{statusBarHeight}}px;">
+  <view class="nav-title" style="line-height: {{capsuleHeight}}rpx;">系统一</view>
+  <text style=" display: block; margin-left: 20rpx; color: #fff; background-color: #07c160; width: 100rpx; text-align: center; border-radius: 9rpx;">{{isConnected ? '在线' : '离线'}}</text>
+</view>
+
+<view class="page-container">
+  <!-- 设备状态卡片 -->
+  <view class="status-card">
+    <view class="card-header">
+      <view class="card-title">设备状态</view>
+      <view class="status-badge {{isConnected ? 'online' : 'offline'}}">
+        {{isConnected ? '在线' : '离线'}}
+      </view>
+    </view>
+    <view class="card-content">
+      <view class="status-item">
+        <view class="status-icon">
+          <view class="icon-circle {{isConnected ? 'active' : ''}}"></view>
+        </view>
+        <view class="status-info">
+          <view class="status-name">连接状态</view>
+          <view class="status-value">{{isConnected ? '已连接' : '未连接'}}</view>
+        </view>
+      </view>
+      <view class="status-item">
+        <view class="status-icon">
+          <view class="icon-circle"></view>
+        </view>
+        <view class="status-info">
+          <view class="status-name">最近活动</view>
+          <view class="status-value">{{lastActivity || '暂无活动'}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮区域 -->
+  <view class="action-section">
+    <view class="section-title">门控操作</view>
+    <view class="btn-container">
+      <button class="action-btn open-btn" bindtap="onTapOpenDoor">
+        <view class="btn-icon">
+          <view class="icon-open"></view>
+        </view>
+        <view class="btn-text">开门</view>
+      </button>
+      <button class="action-btn close-btn" bindtap="onTapCloseDoor">
+        <view class="btn-icon">
+          <view class="icon-close"></view>
+        </view>
+        <view class="btn-text">关门</view>
+      </button>
+      
+      <button class="action-btn pause-btn" bindtap="onTapPauseDoor">
+        <view class="btn-icon">
+          <view class="icon-pause"></view>
+        </view>
+        <view class="btn-text">暂停</view>
+      
+      </button>
+    </view>
+  </view>
+
+  <!-- 操作记录 -->
+  <view class="history-section">
+    <view class="section-title">操作记录</view>
+    <view class="history-list">
+      <view class="history-item" wx:if="{{operationHistory.length === 0}}">
+        <view class="history-empty">暂无操作记录</view>
+      </view>
+      <view class="history-item" wx:for="{{operationHistory}}" wx:key="index">
+        <view class="history-icon {{item.type === 'open' ? 'open' : 'close'}}"></view>
+        <view class="history-content">
+          <view class="history-title">{{item.type === 'open' ? '开门' : '关门'}}</view>
+          <view class="history-time">{{item.time}}</view>
+        </view>
+        <view class="history-status {{item.success ? 'success' : 'fail'}}">
+          {{item.success ? '成功' : '失败'}}
+        </view>
+      </view>
+    </view>
   </view>
 </view>
 
-<view class="tips">注：按钮字体颜色为绿色则设备在线，红色则离线</view> -->
 
-<!-- index.wxml -->
-<view class="container">
-  <button class="custom-button" bindtap="onTapButton">开门/关门</button>
-</view>
+  
+  

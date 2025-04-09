@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": ""
+  "usingComponents": {
+    
+  },
+  "navigationBarTitleText": "系统一",
+  "navigationStyle": "custom"
 }

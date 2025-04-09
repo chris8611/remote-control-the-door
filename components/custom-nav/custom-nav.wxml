@@ -1,0 +1,17 @@
+<view class="custom-nav {{fixed ? 'fixed' : ''}}" style="height: {{navHeight}}px; padding-top: {{statusBarHeight}}px;">
+  <view class="nav-content">
+    <view class="left-area" bindtap="goBack" wx:if="{{showBack}}">
+      <view class="back-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </view>
+    </view>
+    <view class="title-area">
+      <text class="nav-title">{{title}}</text>
+    </view>
+    <view class="right-area">
+      <slot name="right"></slot>
+    </view>
+  </view>
+</view>

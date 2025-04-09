@@ -1,0 +1,75 @@
+<view class="custom-navigation-bar" style="height: {{navBarHeight}}rpx; padding-top: {{statusBarHeight}}px;">
+  <view class="nav-title" style="line-height: {{capsuleHeight}}rpx;">系统二</view>
+  <text style="display: block; margin-left: 20rpx; color: #fff; background-color: #07c160; width: 100rpx; text-align: center; border-radius: 9rpx;">{{device_status}}</text>
+</view>
+
+<view class="page-container">
+  <!-- 设备状态卡片 -->
+  <view class="status-card">
+    <view class="card-header">
+      <view class="card-title">设备状态</view>
+      <view class="status-badge {{device_status === '在线' ? 'online' : 'offline'}}">
+        {{device_status}}
+      </view>
+    </view>
+    <view class="card-content">
+      <view class="status-item">
+        <view class="status-icon">
+          <view class="icon-circle {{device_status === '在线' ? 'active' : ''}}"></view>
+        </view>
+        <view class="status-info">
+          <view class="status-name">连接状态</view>
+          <view class="status-value">{{device_status === '在线' ? '已连接' : '未连接'}}</view>
+        </view>
+      </view>
+      <view class="status-item">
+        <view class="status-icon">
+          <view class="icon-circle"></view>
+        </view>
+        <view class="status-info">
+          <view class="status-name">最近活动</view>
+          <view class="status-value">{{lastActivity || '暂无活动'}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮区域 -->
+  <view class="action-section">
+    <view class="section-title">门控操作</view>
+    <view class="btn-container">
+      <button class="action-btn open-btn" bindtap="openclick">
+        <view class="btn-icon">
+          <view class="icon-open"></view>
+        </view>
+        <view class="btn-text">开门</view>
+      </button>
+      <button class="action-btn close-btn" bindtap="closeclick">
+        <view class="btn-icon">
+          <view class="icon-close"></view>
+        </view>
+        <view class="btn-text">关门</view>
+      </button>
+    </view>
+  </view>
+
+  <!-- 操作记录 -->
+  <view class="history-section">
+    <view class="section-title">操作记录</view>
+    <view class="history-list">
+      <view class="history-item" wx:if="{{operationHistory.length === 0}}">
+        <view class="history-empty">暂无操作记录</view>
+      </view>
+      <view class="history-item" wx:for="{{operationHistory}}" wx:key="index">
+        <view class="history-icon {{item.type === 'open' ? 'open' : 'close'}}"></view>
+          <view class="history-content">
+          <view class="history-title">{{item.type === 'open' ? '开门' : '关门'}}</view>
+          <view class="history-time">{{item.time}}</view>
+        </view>
+        <view class="history-status {{item.success ? 'success' : 'fail'}}">
+          {{item.success ? '成功' : '失败'}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

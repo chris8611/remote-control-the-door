@@ -1,38 +1,28 @@
 {
-  "description": "项目配置文件",
+  "compileType": "miniprogram",
+  "libVersion": "trial",
   "packOptions": {
     "ignore": [],
     "include": []
   },
   "setting": {
-    "urlCheck": false,
+    "coverView": true,
     "es6": true,
     "postcss": true,
-    "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": true,
-    "coverView": true,
-    "autoAudits": false,
+    "enhance": true,
     "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
+    "packNpmRelationList": [],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     }
   },
-  "compileType": "miniprogram",
-  "libVersion": "2.11.3",
-  "appid": "wxc2b07954fd9130c1",
-  "projectname": "bemfa_mini",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
   "condition": {},
   "editorSetting": {
-    "tabIndent": "insertSpaces",
+    "tabIndent": "auto",
     "tabSize": 2
-  }
+  },
+  "appid": "wxc2b07954fd9130c1"
 }

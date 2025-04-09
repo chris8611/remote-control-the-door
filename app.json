@@ -1,14 +1,32 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/index/index",
+    "pages/index1/index1"
     
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#F5F5F5",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./pages/img/系统 (1).png",
+        "selectedIconPath": "./pages/img/系统.png",
+        "text": "系统一"
+      },
+      {
+        "pagePath": "pages/index1/index1",
+        "iconPath": "./pages/img/系统 (3).png",
+        "selectedIconPath": "./pages/img/系统 (2).png",
+        "text": "系统二"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
 }

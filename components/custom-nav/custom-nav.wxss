@@ -1,0 +1,85 @@
+.nav {
+  box-sizing: border-box;
+  width: 100vw;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.nav-main {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.capsule-box {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  font-size: large;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-nav {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  position: relative;
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+.custom-nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-content {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.left-area {
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.back-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.title-area {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-title {
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.right-area {
+  width: 60px;
+  display: flex;
+  justify-content: flex-end;
+}
