@@ -1,0 +1,16 @@
+<!-- <view class="grid-container">
+  <view class="grid-item" wx:for="{{topics}}" wx:key="*this" wx:for-index="index" bindtap="toggleclick" data-index="{{index}}">
+    <text class="head" style="color:{{device_status[index] == '在线' ? 'green' : 'red'}}">{{device[index]}}</text>
+    <view class="status-image" style="background-color: {{powerstatus[index] == '已打开'?'#03a9f5' : '#ccc'}};" >
+    <image src="{{powerstatus[index] == '已打开' ? statusimg[0] : statusimg[1]}}" mode="aspectFit"/>
+    <image class="bottom-left-image" src="{{url[index]}}" mode="aspectFit"/></view>
+    <text class="bottom-right-text">{{currentTime}}</text>
+  </view>
+</view>
+
+<view class="tips">注：按钮字体颜色为绿色则设备在线，红色则离线</view> -->
+
+<!-- index.wxml -->
+<view class="container">
+  <button class="custom-button" bindtap="onTapButton">开门/关门</button>
+</view>

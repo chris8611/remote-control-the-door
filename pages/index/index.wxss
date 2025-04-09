@@ -1,0 +1,99 @@
+page{
+  background-color: #f0f0f0;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 定义两列，每列宽度相等 */
+  grid-template-rows: 1fr 1fr; /* 定义两行，每行高度相等 */
+  gap: 10px; /* 定义网格线的间距 */
+  padding: 20px; /* 定义容器的内边距 */
+  margin-left: -10rpx;
+}
+
+.grid-item {
+  background-color: #fff; /* 定义子容器的背景颜色 */
+  padding: 20px; /* 定义子容器的内边距 */
+  font-size: 30rpx; /* 定义字体大小 */
+  text-align: center; /* 定义文字居中对齐 */
+  position: relative; 
+  width: 260rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
+  
+}
+.head {
+  position: absolute; 
+  top: 20rpx; 
+  font-weight: bold;
+  left: 20rpx;
+}
+
+.status-image {
+  position: absolute; 
+  top: 20rpx; 
+  right: 20rpx; 
+  width: 70rpx; 
+  height: 70rpx; 
+  border: 1rpx solid #ccc;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;}
+
+.status-image image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 8rpx;
+}
+
+.bottom-left-image {
+  position: absolute; 
+  bottom: -120rpx; 
+  left: -230rpx; 
+  width: 60rpx; 
+  height: 60rpx;
+}
+
+.bottom-right-text {
+  position: absolute; 
+  bottom: 20rpx; 
+  right: 20rpx;
+}
+
+.tips{
+  border-left: 10rpx solid #03a9f5;
+  margin-left: 25rpx;
+  padding-left: 10rpx;
+  font-size: 25rpx;
+}
+
+
+
+/* index.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+}
+
+.custom-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: -500rpx;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #45a049; /* Darker Green */
+}
