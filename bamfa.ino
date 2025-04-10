@@ -7,7 +7,7 @@ const int httpPort = 8344;
 const char* WiFi_SSID = "DILV2-2";
 const char* WiFi_Password = "dilv2023";
 
-String uid = "33f8f472f80fda40a9dcc257ee7cf9c9";
+String uid = "qCeorNL1u0gUuuHeDaO2io5tkKPOJNfkkqk4RqtovsJFZJtobb5tXTTyTjiJe/b3";
 String topic1 = "a006";
 String topic2 = "b006";
 
