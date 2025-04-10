@@ -8,7 +8,7 @@ const char *password = "dilv2023";   // Replace with your WiFi password
 
 // MQTT Broker settings
 const int mqtt_port = 8883;  // MQTT port (TLS)
-const char *mqtt_broker = "o7b080b9.ala.cn-hangzhou.emqxsl.cn";  // EMQX broker endpoint
+const char *mqtt_broker = "oVYML80brgh0B5l0Nzm9RPtRvW6qQXrMIQRoMFIC6BxyPIuNBpqd+rupWuW/a/7B";  // EMQX broker endpoint
 const char *mqtt_username = "hack";  // MQTT username for authentication
 const char *mqtt_password = "hack";  // MQTT password for authentication
 
